@@ -5,21 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Encriptador de texto</title>
 </head>
 <body>
     <div class="container">
         <div class="input-text">
-            <input id="enter-text" type="text">
+            <input class="enter-text" id="enter-text" type="text" placeholder="Ingrese el texto aquí">
         </div>
-        <div class="button-encrypt">
-            <button id="encrypt" onclick="encryptHandleClick()">Encriptar</button>
-        </div>
-        <div class="button-decrypt">
-            <button id="decrypt" onclick="decryptHandleClick()">Desencriptar</button>
+        <div class="buttons">
+            <div class="button-encrypt">
+                <button id="encrypt" class="encrypt" onclick="encryptHandleClick()">Encriptar</button>
+            </div>
+            <div class="button-decrypt">
+                <button id="decrypt" onclick="decryptHandleClick()">Desencriptar</button>
+            </div>
         </div>
         <div class="message-card">
-            <div id="message" class="message-content">mensaje</div>
+            <img class="muneco" src="Muñeco.png" alt="imagen-texto">
+            <div class="message" id="message"> 
+                <p class="text1">
+                    Ningun mensaje fue encontrado
+                </p>
+                <p class="text2">
+                    Ingrese el texto que desea encriptar o desencriptar
+                </p>
+            </div>
         </div>
     </div>
     
