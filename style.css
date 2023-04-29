@@ -5,6 +5,20 @@
     background: #f3f5fc;
 }
 
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
 .input-text{
     position: absolute;
     width: 577px;
