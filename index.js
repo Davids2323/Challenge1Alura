@@ -6,17 +6,19 @@ const map = {
     "u": "ufat"
 };
 
-const encrypt = text => {
-    let encrypted = text;
+const encrypt = content => {
+    let encrypted = content;
     for(let [key, value] of Object.entries(map)){
         encrypted = encrypted.replaceAll(key, value)
     };    
     return encrypted;
 };
 
-const encrypted = encrypt('text')
-
-console.log(encrypted)
+const encryptHandleClick = () => {
+    const text = document.getElementById("enter-text").value;
+    const encrypted = encrypt(text)
+    return document.getElementById('message').textContent = `${encrypted}`
+}
 
 const decrypt = encrypted => {
     let decrypted = encrypted;
@@ -26,4 +28,8 @@ const decrypt = encrypted => {
     return decrypted;
 };
 
-console.log(decrypt(encrypted))
+const decryptHandleClick = () => {
+    const incognitText = document.getElementById('message').textContent
+    const decipher = decrypt(incognitText)
+    return document.getElementById('message').textContent = `${decipher}`
+}
