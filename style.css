@@ -51,14 +51,6 @@
     border-radius: 32px;
 }
 
-.muneco{
-    position: absolute;
-    width: 336px;
-    height: 304px;
-    left: 32px;
-    top: 283px;
-}
-
 .message{
     display: flex;
     flex-direction: column;
@@ -66,13 +58,11 @@
     text-align: center;
     padding: 0px;
     gap: 16px;
-
     position: absolute;
     width: 336px;
     height: 243px;
     left: 32px;
-    top: 579px;
-
+    top: 170px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: bold;
@@ -80,8 +70,7 @@
     line-height: 150%;
     color: #0a3871;
     border: none;
-    margin-bottom: 0px;
-
+    justify-content: flex-start;
 }
 .text1{
     font-family: 'Inter';
@@ -108,7 +97,6 @@
 }
 
 .buttons{
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -121,3 +109,35 @@
     left: 240px;
     top: 885px;
 }
+
+.encrypt{
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.decrypt{
+    box-sizing: border-box;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+    cursor: pointer;
+}
+
