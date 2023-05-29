@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Encriptador de texto</title>
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="Logo.png" alt="logo">
-        <div class="input-text">
-            <input class="enter-text" id="enter-text" type="text" placeholder="Ingrese el texto aquí">
-        </div>
-        <div class="buttons">
-            <div class="button-encrypt">
-                <button id="encrypt" class="encrypt" onclick="encryptHandleClick()">Encriptar</button>
-            </div>
-            <div class="button-decrypt">
-                <button 
-                class="decrypt"
-                id="decrypt"  onclick="decryptHandleClick()">Desencriptar</button>
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message" id="message"> 
-                <img class="muneco" src="Muñeco.png" alt="imagen-texto">
-                <p class="text1">
-                    Ningun mensaje fue encontrado
-                </p>
-                <p class="text2">
-                    Ingrese el texto que desea encriptar o desencriptar
-                </p>
-            </div>
-        </div>
+        <header>
+            <img class="logo" src="Logo.png" alt="logo">
+        </header>
+            <section class="first">
+                <input class="enter-text" id="enter-text" type="text" placeholder="Ingrese el texto aquí">
+                <p>Sólo letras minúsculas y sin acento</p>
+                <div class="buttons">
+                    <div class="button-encrypt">
+                        <button id="encrypt" class="encrypt" onclick="encryptHandleClick()">
+                            Encriptar
+                        </button>
+                    </div>
+                    <div class="button-decrypt">
+                        <button class="decrypt" id="decrypt" onclick="decryptHandleClick()">
+                            Desencriptar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="second">
+                <div class="message-card">
+                    <div class="message" id="message"> 
+                        <img class="muneco" src="Muñeco.png" alt="imagen-texto">
+                        <p class="text1">
+                            Ningún mensaje fue encontrado
+                        </p>
+                        <p class="text2">
+                            Ingrese el texto que desea encriptar o desencriptar
+                        </p>
+                        <div>
+                            <button class="copiar" onclick="copiar()">
+                                Copiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </div>
-    
+
+    <script src="index.js"></script>
 </body>
 </html>

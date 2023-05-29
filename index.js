@@ -1,3 +1,6 @@
+const copiar = document.querySelector(".copiar");
+copiar.style.display = "none"
+
 const map = {
     "e": "enter",
     "i": "imes",
