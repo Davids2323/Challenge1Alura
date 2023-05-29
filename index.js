@@ -1,4 +1,4 @@
-const copiar = document.querySelector(".copiar");
+let copiar = document.querySelector(".copiar")
 copiar.style.display = "none"
 
 const map = {
@@ -18,8 +18,10 @@ const encrypt = content => {
 };
 
 const encryptHandleClick = () => {
-    const text = document.getElementById("enter-text").value;
+    const text = document.getElementById("enter-text").value
     const encrypted = encrypt(text)
+    copiar.style.display = "block"
+    document.getElementById('enter-text').value = ""
     return document.getElementById('message').textContent = `${encrypted}`
 }
 
@@ -31,8 +33,17 @@ const decrypt = encrypted => {
     return decrypted;
 };
 
+
 const decryptHandleClick = () => {
-    const incognitText = document.getElementById('message').textContent
+    let incognitText = document.getElementById("enter-text").value
     const decipher = decrypt(incognitText)
+    document.getElementById('enter-text').value = ""
     return document.getElementById('message').textContent = `${decipher}`
+}
+
+const message = document.getElementById("message")
+const copy = () => {
+    navigator.clipboard.writeText(message.textContent)
+    message.textContent = "";
+    alert('Texto Copiado')
 }
